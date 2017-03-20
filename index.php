@@ -20,8 +20,10 @@ if (!is_null($events['events']))
             if ($text == 'สวัสดี')
             {
                 $msg = "ควยไร";
-            }else{
-                $msg = $event['message']['text'];
+            }
+            else
+            {
+                $msg = eval('return ' . $text . ';');
             }
 
             // Get replyToken
