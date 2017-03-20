@@ -25,7 +25,6 @@ if (!is_null($events['events']))
             {
                 $msg = "สวัสดี เราจะช่วยคุณคิดเลขเอง พิมพ์ข้อความเช่น '1+1'";
             }
-            $msg = "<html></html>";
 
             // Get replyToken
             $replyToken = $event['replyToken'];
