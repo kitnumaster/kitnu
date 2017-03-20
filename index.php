@@ -17,17 +17,12 @@ if (!is_null($events['events']))
 
             // Get text sent
             $text = $event['message']['text'];
-            if ($text == 'สวัสดี')
-            {
-                $msg = "สวัสดีจ้าต้องการให้เราช่วยอะไรหยอ?";
-            }
-            else
-            {
+            
                 $msg = eval('return ' . $text . ';');
-            }
+            
             if ($msg == $event['message']['text'])
             {
-                $msg = "สวัสดี เราจะช่วยคุณคิดเลขเอง";
+                $msg = "สวัสดี เราจะช่วยคุณคิดเลขเอง พิมพ์ข้อความเช่น '1+1'";
             }
 
             // Get replyToken
