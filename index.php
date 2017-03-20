@@ -14,15 +14,23 @@ if (!is_null($events['events']))
         // Reply only when message sent is in 'text' format
         if ($event['type'] == 'message' && $event['message']['type'] == 'text')
         {
+            $msg = "สวัสดีคุณควย เราจะช่วยคุณคิดเลขเอง";
             // Get text sent
             $text = $event['message']['text'];
+            if ($text == 'สวัสดี')
+            {
+                $msg = "ควยไร";
+            }else{
+                $msg = $event['message']['text'];
+            }
+
             // Get replyToken
             $replyToken = $event['replyToken'];
 
             // Build message to reply back
             $messages = [
                 'type' => 'text',
-                'text' => $text
+                'text' => $msg
             ];
 
             // Make a POST Request to Messaging API to reply to sender
