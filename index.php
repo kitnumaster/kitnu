@@ -17,9 +17,9 @@ if (!is_null($events['events']))
 
             // Get text sent
             $text = $event['message']['text'];
-            
-                $msg = eval('return ' . $text . ';');
-            
+
+            $msg = $text . " เท่ากับ " . eval('return ' . $text . ';') . " จ้า";
+
             if ($msg == $event['message']['text'])
             {
                 $msg = "สวัสดี เราจะช่วยคุณคิดเลขเอง พิมพ์ข้อความเช่น '1+1'";
