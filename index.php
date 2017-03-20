@@ -15,7 +15,7 @@ if (!is_null($events['events']))
         if ($event['type'] == 'message' && $event['message']['type'] == 'text')
         {
             // Get text sent
-            $text = "ควย";
+            $text = $event['message']['text'];
             // Get replyToken
             $replyToken = $event['replyToken'];
 
