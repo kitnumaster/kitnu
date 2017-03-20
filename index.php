@@ -14,7 +14,7 @@ if (!is_null($events['events']))
         // Reply only when message sent is in 'text' format
         if ($event['type'] == 'message' && $event['message']['type'] == 'text')
         {
-            $msg = "สวัสดีคุณควย เราจะช่วยคุณคิดเลขเอง";
+
             // Get text sent
             $text = $event['message']['text'];
             if ($text == 'สวัสดี')
@@ -24,6 +24,10 @@ if (!is_null($events['events']))
             else
             {
                 $msg = eval('return ' . $text . ';');
+            }
+            if ($msg == $text)
+            {
+                $msg = "สวัสดีคุณควย เราจะช่วยคุณคิดเลขเอง";
             }
 
             // Get replyToken
