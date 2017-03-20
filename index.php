@@ -15,7 +15,7 @@ if (!is_null($events['events']))
         if ($event['type'] == 'message' && $event['message']['type'] == 'text')
         {
             // Get text sent
-            $text = $event['message']['text'];
+            $text = "ควย";
             // Get replyToken
             $replyToken = $event['replyToken'];
 
@@ -43,7 +43,7 @@ if (!is_null($events['events']))
             $result = curl_exec($ch);
             curl_close($ch);
 
-            echo   "ควย\r\n";
+            echo $result . "\r\n";
         }
     }
 }
