@@ -25,7 +25,7 @@ if (!is_null($events['events']))
             {
                 $msg = eval('return ' . $text . ';');
             }
-            if ($msg == $text)
+            if ($msg == $event['message']['text'])
             {
                 $msg = "สวัสดีคุณควย เราจะช่วยคุณคิดเลขเอง";
             }
