@@ -19,7 +19,7 @@ if (!is_null($events['events']))
             $text = $event['message']['text'];
             if ($text == 'สวัสดี')
             {
-                $msg = "ควยไร";
+                $msg = "สวัสดีจ้าต้องการให้เราช่วยอะไรหยอ?";
             }
             else
             {
@@ -27,7 +27,7 @@ if (!is_null($events['events']))
             }
             if ($msg == $event['message']['text'])
             {
-                $msg = "สวัสดีคุณควย เราจะช่วยคุณคิดเลขเอง";
+                $msg = "สวัสดี เราจะช่วยคุณคิดเลขเอง";
             }
 
             // Get replyToken
