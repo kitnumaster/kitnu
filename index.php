@@ -18,13 +18,22 @@ if (!is_null($events['events']))
             // Get text sent
             $text = $event['message']['text'];
 
-            $cal = eval('return ' . $text . ';');
-            $msg = $text . " เท่ากับ " . $cal . " จ้า";
-
-            if ($cal == $event['message']['text'])
+            if ($text == 'ขอหวยหน่อย')
             {
-                $msg = "สวัสดี เราจะช่วยคุณคิดเลขเอง พิมพ์ข้อความเช่น '1+1'";
+                $ran = rand(00, 99);
+                $msg = "ดูจากหน้าตาเอาเลขนี้ไปแล้วกัน {$ran}";
             }
+            else
+            {
+                $cal = eval('return ' . $text . ';');
+                $msg = $text . " เท่ากับ " . $cal . " จ้า";
+                if ($cal == $event['message']['text'])
+                {
+                    $msg = "สวัสดี เราจะช่วยคุณคิดเลขเอง พิมพ์ข้อความเช่น '1+1'";
+                }
+            }
+
+
 
             // Get replyToken
             $replyToken = $event['replyToken'];
