@@ -23,6 +23,14 @@ if (!is_null($events['events']))
                 $ran = rand(00, 99);
                 $msg = "ดูจากหน้าตาเอาเลขนี้ไปแล้วกัน {$ran}";
             }
+            else if($text == 'อยากซื้อสติ๊กเกอร์ไลน์')
+            {
+                 $msg = "แอดไลน์มาสั่งเลยที่ LINE ID : kitnuarsira";
+            }
+            else if($text == 'วันนี้กินไรดี')
+            {
+                 $msg = "ตอนนี้ยังไม่พร้อม คิดเองไปก่อนนะ";
+            }
             else
             {
                 $cal = eval('return ' . $text . ';');
